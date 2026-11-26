@@ -1,0 +1,511 @@
+
+:root {
+    --rose: #a85e69;
+    --dark-rose: #854753;
+    --cream: #fbf7f1;
+    --blush: #f6e9e6;
+    --text: #342b2b;
+    --muted: #706363;
+    --white: #fffdfb;
+    --sage: #e8eee6;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: var(--text);
+    background: var(--white);
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1, h2, h3 {
+    font-family: Georgia, serif;
+    font-weight: normal;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: clamp(2.8rem, 6vw, 5rem);
+    margin-bottom: 24px;
+}
+
+h2 {
+    font-size: clamp(2.2rem, 4vw, 3.4rem);
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+}
+
+p {
+    color: var(--muted);
+    margin-bottom: 18px;
+}
+
+.announcement {
+    background: var(--dark-rose);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: .85rem;
+    letter-spacing: 1px;
+}
+
+header {
+    background: var(--white);
+    border-bottom: 1px solid #eee1dc;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.logo {
+    font-family: Georgia, serif;
+    font-size: 1.6rem;
+    color: var(--dark-rose);
+    white-space: nowrap;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    font-size: .95rem;
+}
+
+.nav-links a:hover {
+    color: var(--rose);
+}
+
+.button {
+    display: inline-block;
+    background: var(--dark-rose);
+    color: white;
+    padding: 14px 26px;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: .2s;
+    border: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: #713b46;
+    transform: translateY(-2px);
+}
+
+.button-outline {
+    background: transparent;
+    color: var(--dark-rose);
+    border: 1px solid var(--dark-rose);
+}
+
+.button-outline:hover {
+    background: var(--blush);
+    color: var(--dark-rose);
+}
+
+.hero {
+    background: var(--cream);
+    padding: 85px 30px;
+}
+
+.hero-content {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    align-items: center;
+    gap: 60px;
+}
+
+.eyebrow {
+    color: var(--dark-rose);
+    font-size: .8rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+.hero h1 em {
+    color: var(--dark-rose);
+}
+
+.hero-description {
+    font-size: 1.1rem;
+    max-width: 600px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 30px;
+}
+
+.book-art {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 450px;
+    background: radial-gradient(circle, #ead1cc 0%, transparent 70%);
+}
+
+.book {
+    width: 290px;
+    min-height: 400px;
+    padding: 35px 28px;
+    background: #9d5965;
+    color: #fff8f1;
+    border-left: 10px solid #78414c;
+    box-shadow: 18px 22px 35px #4b2c2f30;
+    transform: rotate(4deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.book-small {
+    font-size: .7rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.book-title {
+    font-family: Georgia, serif;
+    font-size: 3rem;
+    line-height: 1.05;
+}
+
+.book-subtitle {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 1rem;
+}
+
+.book-author {
+    font-size: .8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+section {
+    padding: 85px 30px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 50px;
+}
+
+.section-heading h2 em {
+    color: var(--dark-rose);
+}
+
+.section-heading p {
+    font-size: 1.05rem;
+}
+
+.three-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.card {
+    padding: 32px;
+    border: 1px solid #eadcd6;
+    border-radius: 12px;
+    background: white;
+}
+
+.card-number {
+    color: var(--rose);
+    font-family: Georgia, serif;
+    font-size: 2rem;
+    margin-bottom: 18px;
+}
+
+.quote-section {
+    background: var(--sage);
+    text-align: center;
+}
+
+.quote-section blockquote {
+    max-width: 850px;
+    margin: auto;
+    font-family: Georgia, serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.3;
+}
+
+.quote-section p {
+    margin-top: 25px;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+}
+
+.product {
+    border: 1px solid #eadcd6;
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-top {
+    padding: 35px;
+    background: var(--cream);
+}
+
+.product-featured .product-top {
+    background: var(--blush);
+}
+
+.product-content {
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.tag {
+    display: inline-block;
+    background: white;
+    color: var(--dark-rose);
+    padding: 6px 12px;
+    border-radius: 30px;
+    font-size: .75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.product ul {
+    padding-left: 20px;
+    margin-bottom: 25px;
+    color: var(--muted);
+}
+
+.product li {
+    margin-bottom: 10px;
+}
+
+.price {
+    font-family: Georgia, serif;
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+.price-note {
+    font-size: .85rem;
+    color: var(--muted);
+    margin-bottom: 25px;
+}
+
+.product .button {
+    align-self: flex-start;
+    margin-top: auto;
+}
+
+.steps-section {
+    background: var(--cream);
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: .8fr 1.2fr;
+    gap: 70px;
+}
+
+.step {
+    display: grid;
+    grid-template-columns: 45px 1fr;
+    gap: 18px;
+    margin-bottom: 28px;
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--blush);
+    color: var(--dark-rose);
+    font-family: Georgia, serif;
+    font-size: 1.3rem;
+}
+
+.step h3 {
+    font-size: 1.4rem;
+}
+
+.signup {
+    background: var(--rose);
+    color: white;
+    text-align: center;
+}
+
+.signup h2 {
+    color: white;
+}
+
+.signup p {
+    color: #f8e9e9;
+}
+
+.signup-form {
+    max-width: 550px;
+    margin: 30px auto 0;
+    display: flex;
+    gap: 12px;
+}
+
+.signup-form input {
+    flex: 1;
+    min-width: 0;
+    padding: 15px 20px;
+    border-radius: 50px;
+    border: none;
+    font-size: 1rem;
+}
+
+.signup-form button {
+    background: white;
+    color: var(--dark-rose);
+    white-space: nowrap;
+}
+
+.faq {
+    max-width: 800px;
+    margin: auto;
+}
+
+details {
+    padding: 22px 0;
+    border-bottom: 1px solid #eadcd6;
+}
+
+summary {
+    cursor: pointer;
+    font-family: Georgia, serif;
+    font-size: 1.3rem;
+}
+
+details p {
+    margin-top: 15px;
+}
+
+footer {
+    background: var(--cream);
+    padding: 35px 30px;
+    text-align: center;
+    font-size: .9rem;
+}
+
+footer p {
+    margin-bottom: 5px;
+}
+
+@media (max-width: 800px) {
+    nav {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .book-art {
+        min-height: 400px;
+    }
+
+    .three-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .products,
+    .steps-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 500px) {
+    section {
+        padding: 60px 20px;
+    }
+
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .hero-buttons .button {
+        text-align: center;
+    }
+
+    .signup-form {
+        flex-direction: column;
+    }
+
+    .signup-form button {
+        width: 100%;
+    }
+
+    .book {
+        width: 250px;
+        min-height: 350px;
+    }
+
+    .book-title {
+        font-size: 2.5rem;
+    }
+}
